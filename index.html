@@ -3,18 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Belajar CSS</title>
+    <title>Javascript Training Arc</title>
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     
     <main>
-        <section id="fomr-place">
-            <form>
-                
+        <section id="form-place">
+            <h1>Form Training Arc</h1>
+            <form id="form"> 
+                <div class="email-input">
+                    <label for="email-label">Email</label>
+                    <input type="text" id="email" aria-labelledby="email-label" autocomplete="email">
+                </div>
+                <div class="password-input">
+                    <label for="password-label">Password</label>
+                    <input type="password" id="password" aria-labelledby="password-label" autocomplete="current-password">
+                </div>
+                <button type="submit" id="submit-btn">Input Data</button>
             </form>
         </section>
     </main>
+
+    <script src="/main.js"></script>
    
 </body>
 </html>
