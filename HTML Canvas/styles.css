@@ -1,0 +1,49 @@
+:root{
+    --dark: #17181E;
+    --blue: #849BEB;
+    --lightBlue: #C4D5FC;
+    --green: #25D952;
+    --light: #F0F0F1;
+    --gray: #6B6B7C;
+    --dimmedLight: #BBBBBB;
+    --pink: #DDC2D4;
+    --content: #1E1F27;
+    --hover-color: rgba(255, 141, 141, 0.15);
+    --green-hover: rgba(37, 217, 82, 0.271);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 80px 0px;
+}
+
+#drawing-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    text-align: center;
+    h1 {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+    #my-canvas{
+        width: 800px;
+        height: 500px;
+        background-color: var(--content);
+        border-radius: 8px;
+        border: 1px solid var(--dimmedLight);
+    }
+}
