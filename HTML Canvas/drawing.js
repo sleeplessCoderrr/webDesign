@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     //Makking an oval shape using stroke
     ctx.beginPath();
-    ctx.arc(100, 110, 20, 0, Math.PI * 2);
+    ctx.arc(100, 100, 20, 0, Math.PI * 2);
     ctx.lineWidth = 1;
     ctx.stroke();
 
