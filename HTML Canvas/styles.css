@@ -42,7 +42,7 @@ main {
     #my-canvas{
         width: 800px;
         height: 500px;
-        background-color: var(--light);
+        background-color: var(--content);
         border-radius: 8px;
         border: 1px solid var(--dimmedLight);
     }

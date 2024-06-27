@@ -1,27 +1,34 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     const canvasAnimation = document.getElementById('my-canvas');
-    const contex = canvasAnimation.getContext('2d');
+    const cont = canvasAnimation.getContext('2d');
 
-    //on how to add font
-    contex.font = '12px Inter';
-    contex.fillText('Learn Text', 20, 20);
+    let xPos, yPos;
+    xPos = yPos = 20;
+    const speed = 5;
 
-    //when you wantead to acces translate, scale,, and rotate
-    contex.save();
-    contex.translate(20, 40); //this to to move the next writting
-    contex.fillText('Is it easy or not?', 0, 0); //now it's x and y will depend to the translate point
-    contex.restore();
+    //basic movement
+    document.addEventListener('keydown', (e)=>{
+        if(e.key == 'a')
+            xPos -= speed;
+        if(e.key == 'd')
+            xPos += speed;
+        if(e.key == 'w')
+            yPos -= speed;
+        if(e.key == 's')
+            yPos += speed;
+    });
 
-    contex.save();
-    contex.translate(20, 60)
-    contex.rotate(Math.PI * 0.3); //it's similar to arc function
-    contex.fillText('I think its a bit tricky', 0, 0);
-    contex.restore();
+    function animation(){
+        //to clear the rectangle that already made before
+        cont.clearRect(0, 0, canvasAnimation.clientWidth, canvasAnimation.clientHeight);
+        
+        //to fill the rectangle
+        cont.fillStyle = '#25D952'
+        cont.fillRect(xPos, yPos, 40, 40);
+        
+        //when ready call the animation function
+        requestAnimationFrame(animation);
+    }
 
-    contex.save();
-    contex.translate(140, 20);
-    contex.scale(1.2, 1.2);
-    contex.fillText('Now lets scale this', 0, 0);
-    contex.restore();
-
-});
+    animation();
+})
