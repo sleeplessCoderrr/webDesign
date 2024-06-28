@@ -1,7 +1,6 @@
-document.addEventListener('DOMContentLoaded', ()=>{
+import {ctx, canvas} from '../HTML Canvas/canvas.js';
 
-    const myCanvas = document.getElementById('my-canvas');
-    const ctx = myCanvas.getContext('2d');
+document.addEventListener('DOMContentLoaded', ()=>{
 
     //Making template shape
     ctx.fillStyle = '#25D952';

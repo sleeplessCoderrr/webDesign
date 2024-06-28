@@ -1,14 +1,13 @@
-document.addEventListener('DOMContentLoaded', ()=>{
-    const canvasAnimation = document.getElementById('my-canvas');
-    const cont = canvasAnimation.getContext('2d');
+import {ctx, canvas} from '../HTML Canvas/canvas.js';
 
-    cont.shadowColor = 'black';
-    cont.shadowBlur = 10;
+document.addEventListener('DOMContentLoaded', ()=>{
+    ctx.shadowColor = 'black';
+    ctx.shadowBlur = 10;
 
     const img = new Image();
     img.src = '../img/badminton.jpeg'
     img.onload = ()=>{
-        cont.drawImage(img, 40, 40, 120, 100);
+     ctx.drawImage(img, 40, 40, 120, 100);
     }
 
     let xPos, yPos;
@@ -29,11 +28,11 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     function animation(){
         //to clear the rectangle that already made before
-        cont.clearRect(0, 0, canvasAnimation.clientWidth, canvasAnimation.clientHeight);
+     ctx.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
         
         //to fill the rectangle
-        cont.fillStyle = '#25D952'
-        cont.fillRect(xPos, yPos, 40, 40);
+     ctx.fillStyle = '#25D952'
+     ctx.fillRect(xPos, yPos, 40, 40);
         
         //when ready call the animation function
         requestAnimationFrame(animation);
